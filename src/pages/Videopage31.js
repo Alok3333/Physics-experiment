@@ -23,7 +23,7 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import KeyboardVoiceIcon from "@mui/icons-material/KeyboardVoice";
 // CSS path here make sure change the path here
-import styles from "../css/Video2.module.css";
+import styles from "../virtuallabcss/Video2.module.css";
 
 import {
   TransformWrapper,
@@ -123,7 +123,7 @@ const videos = [
   },
 ];
 
-const VideoPage = () => {
+const VideoPage31 = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [progress, setProgress] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -593,4 +593,4 @@ const VideoPage = () => {
   );
 };
 
-export default VideoPage;
+export default VideoPage31;

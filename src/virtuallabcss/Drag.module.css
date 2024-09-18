@@ -1,0 +1,30 @@
+.containerWrapper {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.imageContainer {
+    border: 2px dashed #ccc;
+    padding: 10px;
+    width: 300px;
+    min-height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.imageItem {
+    cursor: pointer;
+}
+
+.dropZone {
+    border: 2px dashed #4caf50;
+    padding: 10px;
+    width: 300px;
+    min-height: 200px;
+}
