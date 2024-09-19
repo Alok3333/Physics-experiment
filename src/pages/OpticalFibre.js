@@ -96,6 +96,34 @@ const OpticalFibre = () => {
 
   return (
     <Container maxWidth="md">
+      <Box sx={{ border: "2px dashed #ccc", mt: 2 }}>
+        <Typography sx={{ p: 1 }}>
+          <b>Intructions: </b>
+        </Typography>
+        <Typography sx={{ ml: 3, px: 2 }}>
+          <ol>
+            <li>First arrenge the all tools given a image below.</li>
+            <li>
+              Once you arreged all tools then you will able to click{" "}
+              <b style={{ color: "blue" }}>select cable</b> button.
+            </li>
+            <li>Select cable we have two value fibre cable and glass cable.</li>
+            <li>
+              Once you seleted any value then you will see{" "}
+              <b>Distance of Screen (L) in mm:</b> and in down table you will
+              see diameter with value.
+            </li>
+            <li>
+              Distance of Screen, when you will decrease and increase the range,
+              you will see effect on right side <b>output screen</b>
+            </li>
+            <li>
+              Finally you will see Measurement of Numerical Aperture of Optical
+              Fiber in fibre and glass.
+            </li>
+          </ol>
+        </Typography>
+      </Box>
       <Box className={dragStyle.containerWrapper}>
         <h1>Measurement of Numerical Aperture of Optical Fiber</h1>
         <Grid container spacing={2}>
@@ -133,7 +161,7 @@ const OpticalFibre = () => {
                   onDrop={(event) => handleDropImage(index, event)}
                   onDragOver={handleDragOver}
                 >
-                  <Typography>Tool Drop Here {index + 1}</Typography>
+                  <Typography>Drop Tool Here {index + 1}</Typography>
                   {droppedImages[index] && (
                     <Box
                       className={`${dragStyle.imageItem} ${
@@ -152,11 +180,23 @@ const OpticalFibre = () => {
             </Box>
           </Grid>
         </Grid>
-        <Typography>Arrenge the images like this way</Typography>
-        <img
-          src="https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-18-4351-optical_fib.png"
-          alt="optical_fiber"
-        />
+        <Box sx={{ border: "2px dashed #ccc", my: 4, mr: 2 }}>
+          <Typography
+            sx={{
+              fontFamily: "Montserrat, sans-serif",
+              fontWeight: 600,
+              ml: 1,
+              p: 2,
+            }}
+          >
+            Arrenge the tool like this way
+          </Typography>
+          <img
+            src="https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-19-5727-optical_fib1.png"
+            alt="optical_fiber"
+            style={{ width: "100%" }}
+          />
+        </Box>
         <Grid container spacing={2}>
           <Grid
             item
