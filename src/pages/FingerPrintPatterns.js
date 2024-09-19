@@ -16,7 +16,6 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useState } from "react";
-//   import styles from "../virtuallabcss/FingerPrintPatterns.module.css";
 
 const FingerPrintPatterns = () => {
   const [currentVal, setCurrentVal] = useState("Mongoloid");
