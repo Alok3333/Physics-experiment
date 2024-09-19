@@ -97,8 +97,8 @@ const OpticalFibre = () => {
   return (
     <Container maxWidth="md">
       <Box sx={{ border: "2px dashed #ccc", mt: 2 }}>
-        <Typography sx={{ p: 1 }}>
-          <b>Intructions: </b>
+        <Typography sx={{ p: 1, fontSize: "22px" }}>
+          <b>Instructions: </b>
         </Typography>
         <Typography sx={{ ml: 3, px: 2 }}>
           <ol>
@@ -119,13 +119,16 @@ const OpticalFibre = () => {
             </li>
             <li>
               Finally you will see Measurement of Numerical Aperture of Optical
-              Fiber in fibre and glass.
+              Fiber with fibre and glass.
             </li>
           </ol>
         </Typography>
       </Box>
       <Box className={dragStyle.containerWrapper}>
-        <h1>Measurement of Numerical Aperture of Optical Fiber</h1>
+        <h1>Experiment name:</h1>
+        <h1 style={{ textDecoration: "underline", color: "#FF0000" }}>
+          Measurement of Numerical Aperture of Optical Fiber
+        </h1>
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <Box className={dragStyle.container}>

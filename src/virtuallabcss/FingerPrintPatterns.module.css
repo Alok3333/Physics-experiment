@@ -1,0 +1,49 @@
+/* src/App.module.css */
+
+.mainImg {
+    /* background-image: url("image/mainimg.png"); */
+    background-repeat: no-repeat;
+    height: 900px;
+    width: 100%;
+    position: relative;
+}
+
+.dragContainer {
+    width: 30px;
+    height: 70px;
+    margin-left: 7.5%;
+    margin-top: 550px;
+    float: left;
+    position: static;
+}
+
+.uprow {
+    width: 450px;
+    margin-top: 80px;
+    margin-left: -7%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dragItem {
+    width: 70px;
+    height: 70px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.formContainer {
+    margin-left: 611px;
+    margin-top: 315px;
+    display: flex;
+    align-items: center;
+}
+
+.backgroundDiv {
+    width: 250px;
+    height: 230px;
+    margin-left: 2.5%;
+    margin-top: 6%;
+    float: left;
+    background-size: cover;
+}
