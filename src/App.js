@@ -2,6 +2,7 @@ import "./App.css";
 import DragDrop from "./pages/DragDrop";
 import FingerPrintPatterns from "./pages/FingerPrintPatterns";
 import OpticalFibre from "./pages/OpticalFibre";
+import Simulation from "./pages/Simulation";
 import StefansLawVerification from "./pages/StefansLaw";
 import VideoPage31 from "./pages/Videopage31";
 
@@ -13,6 +14,7 @@ function App() {
       {/* <DragDrop/> */}
       {/* <OpticalFibre/> */}
       <FingerPrintPatterns />
+      {/* <Simulation /> */}
     </div>
   );
 }
