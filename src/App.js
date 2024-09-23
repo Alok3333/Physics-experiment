@@ -5,6 +5,7 @@ import FingerPrintPatterns from "./pages/FingerPrintPatterns";
 import OpticalFibre from "./pages/OpticalFibre";
 import PhaseSequenceSynchronous from "./pages/PhaseSequenceSynchronous";
 import Simulation from "./pages/Simulation";
+import SkeletonExp from "./pages/SkeletonExp";
 import StefansLawVerification from "./pages/StefansLaw";
 import VideoPage31 from "./pages/Videopage31";
 
@@ -18,7 +19,8 @@ function App() {
       {/* <FingerPrintPatterns /> */}
       {/* <Simulation /> */}
       {/* <PhaseSequenceSynchronous/> */}
-      <DigitalTriradii/>
+      {/* <DigitalTriradii/> */}
+      <SkeletonExp/>
     </div>
   );
 }

@@ -236,7 +236,7 @@ const DigitalTriradii = () => {
                     ))}
                   </Box>
 
-                  {/* Positioning each red box differently */}
+                  {/* Positioning each box differently */}
                   <Box
                     onDrop={handleDrop(0)}
                     onDragOver={(e) => e.preventDefault()}
@@ -310,7 +310,7 @@ const DigitalTriradii = () => {
                     {droppedLetters[3]}
                   </Box>
 
-                  {/* Positioning each red box differently */}
+                  {/* Positioning each box differently */}
                   <Box
                     onDrop={handleDrop2(0)}
                     onDragOver={(e) => e.preventDefault()}
