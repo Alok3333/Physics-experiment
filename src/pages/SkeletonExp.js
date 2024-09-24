@@ -1,19 +1,32 @@
 import React, { useState } from "react";
 import { Box, Button, Typography, Grid, Container } from "@mui/material";
 
-import img12 from "../assets/humanskeleton.jpg";
-import part1 from "../assets/skeleton_part-1.png";
-import part2 from "../assets/skeleton_part-2.png";
-import part3 from "../assets/skeleton_part-3.png";
-import part4 from "../assets/skeleton_part-4.png";
-import part5 from "../assets/skeleton_part-5.png";
-import part6 from "../assets/skeleton_part--6.png";
-import part7 from "../assets/skeleton_part-7.png";
-import part8 from "../assets/skeleton_part--8.png";
-import part9 from "../assets/skeleton_part-9.png";
-import part10 from "../assets/skeleton_part-10.png";
-import part11 from "../assets/skeleton_part-11.png";
-import part12 from "../assets/skeleton_part-12.png";
+const img12 =
+  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-24-3258-humanskeleton.jpg";
+const part1 =
+  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-24-3329-skeleton_part-1.png";
+const part2 =
+  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-24-3354-skeleton_part-2.png";
+const part3 =
+  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-24-3430-skeleton_part-3.png";
+const part4 =
+  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-24-353-skeleton_part-4.png";
+const part5 =
+  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-24-3531-skeleton_part-5.png";
+const part6 =
+  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-24-3654-skeleton_part--6.png";
+const part7 =
+  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-24-3724-skeleton_part-7.png";
+const part8 =
+  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-24-3752-skeleton_part--8.png";
+const part9 =
+  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-24-3819-skeleton_part-9.png";
+const part10 =
+  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-24-3849-skeleton_part-10.png";
+const part11 =
+  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-24-3920-skeleton_part-11.png";
+const part12 =
+  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-24-3950-skeleton_part-12.png";
 
 const SkeletonExp = () => {
   const [stateTrue, setStateTrue] = useState(false);
@@ -36,7 +49,7 @@ const SkeletonExp = () => {
   const handleNext = () => {
     const allDroppedFilled = droppedImages.every((img) => img);
     if (allDroppedFilled) {
-      alert("Correct!")
+      alert("Correct!");
     } else {
       alert("Incorrect!");
     }
