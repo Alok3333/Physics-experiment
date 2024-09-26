@@ -2,6 +2,7 @@ import "./App.css";
 import DigitalTriradii from "./pages/DigitalTriradii";
 import DragDrop from "./pages/DragDrop";
 import FingerPrintPatterns from "./pages/FingerPrintPatterns";
+import GetMold from "./pages/GetMold";
 import MendelsLaw from "./pages/MendelsLaw";
 import OpticalFibre from "./pages/OpticalFibre";
 import PhaseSequenceSynchronous from "./pages/PhaseSequenceSynchronous";
@@ -24,7 +25,8 @@ function App() {
       {/* <DigitalTriradii/> */}
       {/* <SkeletonExp/> */}
       {/* <SkeletonExpPart2 /> */}
-      <MendelsLaw />
+      {/* <MendelsLaw /> */}
+      <GetMold/>
     </div>
   );
 }

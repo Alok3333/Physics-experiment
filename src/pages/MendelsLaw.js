@@ -41,10 +41,6 @@ const MendelsLaw = () => {
 
   const change1 = () => {
     if (mainVal === "RrYY") {
-      //   setSnackbarMessage(
-      //     "The Punnett square is completed. Now enter the phenotypic ratio of the dihybrid cross."
-      //   );
-      //   setSnackbarOpen(true);
       setFirst(false);
       setSecond(true);
       setMainVal("");
@@ -56,10 +52,6 @@ const MendelsLaw = () => {
 
   const change2 = () => {
     if (mainVal === "RRYy") {
-      //   setSnackbarMessage(
-      //     "The Punnett square is completed. Now enter the phenotypic ratio of the dihybrid cross."
-      //   );
-      //   setSnackbarOpen(true);
       setSecond(false);
       setThird(true);
       setMainVal("");
@@ -71,10 +63,6 @@ const MendelsLaw = () => {
 
   const change3 = () => {
     if (mainVal === "RrYy") {
-      //   setSnackbarMessage(
-      //     "The Punnett square is completed. Now enter the phenotypic ratio of the dihybrid cross."
-      //   );
-      //   setSnackbarOpen(true);
       setThird(false);
       setFour(true);
       setMainVal("");
@@ -86,10 +74,6 @@ const MendelsLaw = () => {
 
   const change4 = () => {
     if (mainVal === "rryy") {
-      //   setSnackbarMessage(
-      //     "The Punnett square is completed. Now enter the phenotypic ratio of the dihybrid cross."
-      //   );
-      //   setSnackbarOpen(true);
       setFour(false);
       setFive(true);
       setMainVal("");
@@ -102,10 +86,14 @@ const MendelsLaw = () => {
   const check = () => {
     const { r1, r2, r3, r4 } = ratios;
     if (r1 === "9" && r2 === "3" && r3 === "3" && r4 === "1") {
-      setSnackbarMessage("Phenotypic ratio is correct");
+      setSnackbarMessage(
+        "Phenotypic ratio is correct well tried to reach here. now back to home page to click top button"
+      );
       setRatios({ r1: "", r2: "", r3: "", r4: "" });
     } else {
-      setSnackbarMessage("Enter a correct value");
+      setSnackbarMessage(
+        "Enter a correct value, The Punnett square is completed. Now enter the phenotypic ratio of the dihybrid cross."
+      );
     }
     setSnackbarOpen(true);
   };

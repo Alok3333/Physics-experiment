@@ -1,0 +1,86 @@
+.stick{
+    width:30px;
+     height:100px;
+    position:absolute;
+    top:-20px;
+    left:100px;
+    background-color:lightgrey;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset
+}
+
+.slidein {
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+  }
+  
+
+
+  @keyframes slidein {
+    from {
+      translate: 0vw 0;
+      scale: 100% 1;
+    }
+  
+    to {
+      translate: 4vw 0;
+      scale: 100% 1;
+    }
+  }
+  
+  .greenSolution {
+    width: 178px;
+    height: 78px;
+    background-color: rgba(0, 128, 255, 0); /* Initial transparent background */
+    position: absolute;
+    top: 45px;
+    left: 42px;
+    border-radius: 100%;
+  }
+  
+  .greenSolution.fadeInAnimation {
+    animation: fadeInBackground 4s forwards; /* Trigger animation over 2 seconds */
+  }
+  
+  @keyframes fadeInBackground {
+    0% {
+      background-color: rgba(0, 128, 255, 0.1); /* Starting color */
+    }
+    10%{
+      background-color: rgba(5, 100, 5,.2);
+    }
+    20%{
+      background-color: rgba(5, 100, 5,.3);
+    }
+    40%{
+      background-color: rgba(5, 100, 5,.5);
+    }
+    60%{
+      background-color: rgba(5, 100, 5,.7);
+      
+    }
+    80%{
+      background-color: rgba(5, 100, 5,.8);
+
+    }
+    100% {
+      background-color: rgba(5, 100, 5,1); /* Final color */
+    }
+  }
+  
+
+
+  .rotateAnimation {
+    animation: rotateHalfway 2s forwards; /* Rotate for 2 seconds */
+  }
+  
+  @keyframes rotateHalfway {
+    0% {
+      transform: rotate(0deg); /* Initial rotation */
+    }
+   
+    50% {
+      transform: rotate(180deg); /* Halfway rotation (50% of a full rotation) */
+    }
+  }
