@@ -24,9 +24,9 @@ function App() {
       {/* <PhaseSequenceSynchronous/> */}
       {/* <DigitalTriradii/> */}
       {/* <SkeletonExp/> */}
-      {/* <SkeletonExpPart2 /> */}
+      <SkeletonExpPart2 />
       {/* <MendelsLaw /> */}
-      <GetMold/>
+      {/* <GetMold/> */}
     </div>
   );
 }

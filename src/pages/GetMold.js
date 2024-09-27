@@ -318,17 +318,6 @@ const GetMold = () => {
                   </ListItem>
                 </List>
               </Box>
-
-              <Box>
-                <Typography variant="h6">Control Menu</Typography>
-                <List>
-                  <ListItem disablePadding>
-                    <ListItemButton>
-                      <ListItemText primary="Restart" />
-                    </ListItemButton>
-                  </ListItem>
-                </List>
-              </Box>
             </Box>
             <Box
               sx={{
@@ -521,7 +510,7 @@ const GetMold = () => {
           >
             <Box>
               <Typography variant="h5">
-                {isFinished ? `Well Done ${username} 🎉` : `${username}`}
+                {isFinished ? `Well Done ${username} 🎉` : `${username} 😕`}
               </Typography>
               <Typography variant="subtitle1" sx={{ fontSize: "2rem" }}>
                 Your total score is <br />
