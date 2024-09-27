@@ -22,9 +22,9 @@ function App() {
       {/* <FingerPrintPatterns /> */}
       {/* <Simulation /> */}
       {/* <PhaseSequenceSynchronous/> */}
-      {/* <DigitalTriradii/> */}
+      <DigitalTriradii/>
       {/* <SkeletonExp/> */}
-      <SkeletonExpPart2 />
+      {/* <SkeletonExpPart2 /> */}
       {/* <MendelsLaw /> */}
       {/* <GetMold/> */}
     </div>
