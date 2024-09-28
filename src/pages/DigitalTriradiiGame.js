@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import global1 from "./global1";
 import {
   Box,
   Button,
@@ -14,8 +15,8 @@ const img23 =
   "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-20-358-triradii.png";
 
 // Create a username and register no
-const username = "C Swathi";
-const registerNo = "13214555";
+const username = global1.name;
+const registerNo = global1.regno;
 
 const DigitalTriradii = () => {
   const [score, setScore] = useState(0);

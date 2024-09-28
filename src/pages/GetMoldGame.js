@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import global1 from "./global1";
 import {
   Box,
   Button,
@@ -24,8 +25,8 @@ const solventTiledBeakerImg = "https://jadavpuruniversity.s3-ap-south-1.amazonaw
 const mortarDefaultImg = mortarImg;
 
 // Create a username and register no
-const username = "Alok";
-const registerNo = "13214555";
+const username = global1.name;
+const registerNo = global1.regno;
 
 const GetMold = () => {
   const [level, setLevel] = useState(0);

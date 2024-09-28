@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Box, TextField, Button, Container, Typography } from "@mui/material";
+import global1 from "./global1";
 
 const imgSkeleton1 =
   "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-27-1636-skeleton2_level_1.png";
@@ -8,8 +9,8 @@ const imgSkeleton2 =
   "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-27-177-skeleton2_level_2.png";
 
 // Create a username and register no
-const username = "Alok";
-const registerNo = "13214555";
+const username = global1.name;
+const registerNo = global1.regno;
 
 const SkeletonExpPart2 = () => {
   const [level, setLevel] = useState(0);
