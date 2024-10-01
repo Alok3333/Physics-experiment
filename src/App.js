@@ -4,6 +4,7 @@ import DragDrop from "./pages/DragDrop";
 import FingerPrintPatterns from "./pages/FingerPrintPatternsGame";
 import GetMold from "./pages/GetMoldGame";
 import MendelsLaw from "./pages/MendelsLaw";
+import NuclearMagneticResosnance from "./pages/NuclearMagneticResosnance";
 import OpticalFibre from "./pages/OpticalFibreGame";
 import PhaseSequenceSynchronous from "./pages/PhaseSequenceSynchronous";
 import Simulation from "./pages/Simulation";
@@ -20,19 +21,17 @@ function App() {
       {/* <Simulation /> */}
       {/* <PhaseSequenceSynchronous/> */}
 
-     
-      
-
       {/* <MendelsLaw /> */}
       
       {/* <GetMold/> */}
       {/* <DigitalTriradii/> */}
       {/* <SkeletonExpPart2 /> */}
       {/* <OpticalFibre/> */}
-
       {/* <StefansLawVerification/> */}
       {/* <FingerPrintPatterns /> */}
       {/* <SkeletonExp/> */}
+
+      <NuclearMagneticResosnance/>
     </div>
   );
 }

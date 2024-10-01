@@ -12,32 +12,28 @@ import {
   Typography,
 } from "@mui/material";
 
-const getMoldImg =
-  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-26-274-get_mold.png";
-const mortarImg =
-  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-26-4848-fill_solution.png";
+const Benzeneb1 =
+  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/10-2024-1-2757-Benzene-removebg-preview.png";
+const Spectrometer2 =
+  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/10-2024-1-2350-b2-removebg-preview.png";
+const SpectrometerFill2 =
+  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/10-2024-1-2717-Benzene_fill-removebg-preview.png";
+const Benzeneb1Tilled =
+  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/10-2024-1-2644-Benzene__1_-removebg-preview.png";
+const SpectrometerFill22 =
+  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/10-2024-1-2933-Benzene.gif";
 const microwave =
-  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-26-4916-microwave_img.png";
-const sampleBeakerImg =
-  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-26-505-sample.png";
-const sampleTiledBeakerImg =
-  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-26-5043-sample_tiled.png";
-const mortarActiveImg2 =
-  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-26-5120-solution.png";
-const mortarActiveImg =
-  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-26-520-solution_fill.png";
+  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/10-2024-1-1210-NMRSpectro.png";
 const solventBeakerImg =
   "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-26-5233-solvent.png";
-const solventTiledBeakerImg =
-  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-26-5313-solventTiled.png";
 
-const mortarDefaultImg = mortarImg;
+const SpectrometerDefault = Spectrometer2;
 
 // Create a username and register no
 const username = global1.name;
 const registerNo = global1.regno;
 
-const GetMold = () => {
+const NuclearMagneticResosnance = () => {
   const [level, setLevel] = useState(0);
   const [score, setScore] = useState(0);
   const [apparatus, setApparatus] = useState({
@@ -47,44 +43,38 @@ const GetMold = () => {
     irplate: false,
     desiccator: false,
   });
-  const { sampleBeaker, solventBeaker, mortar, irplate, desiccator } =
-    apparatus;
+  const { sampleBeaker, mortar, desiccator } = apparatus;
 
   const [sampleBeakerRotation, setSampleBeakerRotation] = useState(0);
-  const [solventBeakerRotation, setSolventBeakerRotation] = useState(0);
-  const [currentSampleBeakerImg, setCurrentSampleBeakerImg] =
-    useState(sampleBeakerImg);
-  const [currentSolventBeakerImg, setCurrentSolventBeakerImg] =
-    useState(solventBeakerImg);
-  const [currentMortarImg, setCurrentMortarImg] = useState(mortarDefaultImg);
+  const [currentBenzeneb1, setCurrentBenzeneb1] = useState(Benzeneb1);
+  const [currentSpectrometer2, setCurrentSpectrometer2] =
+    useState(SpectrometerDefault);
   const [isSampleBeakerClicked, setIsSampleBeakerClicked] = useState(false);
-  const [finalMotorImage, setFinalMotorImage] = useState(false);
   const [animateMortar, setAnimateMortar] = useState(false);
-  const [animateMold, setAnimateMold] = useState(false);
-  const [showMoldImg, setShowMoldImg] = useState(false);
   const [showMortarImages, setShowMortarImages] = useState(true);
-  const [microwaveClicked, setMicrowaveClicked] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
 
   // Track if the actions have been completed
   const [sampleBeakerUsed, setSampleBeakerUsed] = useState(false);
-  const [solventBeakerUsed, setSolventBeakerUsed] = useState(false);
-  const [microwaveUsed, setMicrowaveUsed] = useState(false);
   const [isMortarClicked, setIsMortarClicked] = useState(false);
+
+  // State for final image
+  const [getFinalImg, setGetFinalImg] = useState(false);
 
   const handleSampleBeakerClick = () => {
     if (!sampleBeakerUsed) {
       setSampleBeakerUsed(true);
       setSampleBeakerRotation(90);
-      setCurrentSampleBeakerImg(sampleTiledBeakerImg);
-      setCurrentMortarImg(mortarActiveImg2);
+      setCurrentBenzeneb1(Benzeneb1Tilled);
+      setCurrentSpectrometer2(SpectrometerFill22);
       setIsSampleBeakerClicked(true);
 
       setTimeout(() => {
         setSampleBeakerRotation(0);
-        setCurrentSampleBeakerImg(sampleBeakerImg);
-        setCurrentMortarImg(mortarDefaultImg);
+        setCurrentBenzeneb1(Benzeneb1);
+        setCurrentSpectrometer2(SpectrometerDefault);
         setIsSampleBeakerClicked(false);
+        setGetFinalImg(true);
       }, 2000);
 
       setScore((prev) => Math.min(prev + 30, 100));
@@ -93,45 +83,22 @@ const GetMold = () => {
     }
   };
 
-  const handleSolventBeakerClick = () => {
-    if (isSampleBeakerClicked && !solventBeakerUsed) {
-      setSolventBeakerUsed(true);
-      setSolventBeakerRotation(-90);
-      setCurrentSolventBeakerImg(solventTiledBeakerImg);
-      setCurrentMortarImg(mortarActiveImg);
-
-      setTimeout(() => {
-        setSolventBeakerRotation(0);
-        setCurrentSolventBeakerImg(solventBeakerImg);
-      }, 2000);
-      setScore((prev) => Math.min(prev + 20, 100));
-    } else {
-      alert("Don't touch again.");
-    }
-    setFinalMotorImage(true);
-  };
-
   const handleMortarClick = () => {
-    if (!finalMotorImage) return;
+    if (!getFinalImg) return;
     setAnimateMortar(true);
     setIsMortarClicked(true);
+    setScore((prev) => Math.min(prev + 50, 100));
     setTimeout(() => {
       setShowMortarImages(false);
     }, 2000);
   };
 
-  const handleMicrowaveClick = () => {
-    if (!microwaveClicked && isMortarClicked) {
-      setShowMoldImg(true);
-      setAnimateMold(true);
-      setMicrowaveClicked(true);
-      setScore((prev) => Math.min(prev + 50, 100));
+  const handleNextBtn = () => {
+    let randomNumber = Math.floor(Math.random() * 20);
+    setScore(score + randomNumber);
+    setLevel((prev) => prev + 1);
+    if (score > 75) {
       setIsFinished(true);
-      setTimeout(() => {
-        setAnimateMold(false);
-      }, 2000);
-    } else {
-      alert("Don't touch again.");
     }
   };
 
@@ -174,7 +141,8 @@ const GetMold = () => {
           sx={{ border: "5px solid green", p: "10px 0px", borderRadius: "5px" }}
         >
           <Typography variant="h4" textAlign="center" fontWeight="bold">
-            Preparation of Gels
+            Nuclear Magnetic Resosnance Spectrocopy and Evaulation of Simple 1H
+            NMR Spectra of Select Organic Compounds
           </Typography>
           <Box>
             <Typography
@@ -198,55 +166,8 @@ const GetMold = () => {
               {/* Theory content here */}
               <ol style={{ marginLeft: "20px" }}>
                 <li>
-                  Click on the Agarose Beaker option in the Apparatus Menu to
-                  introduce it into the workspace.
-                </li>
-                <li>
-                  Click on the Buffer Solution Beaker option in the Apparatus
-                  Menu to introduce it into the workspace.
-                </li>
-                <li>
-                  Click on the Solution Beaker option in the Apparatus Menu to
-                  introduce it into the workspace.
-                </li>
-                <li>
-                  Click on the Microwave option in the Apparatus Menu to
-                  introduce it into the workspace.
-                </li>
-                <li>
-                  Click on the Gel Mold option in the Apparatus Menu to
-                  introduce it into the workspace.
-                </li>
-                <li>
-                  Click on the Agarose Beaker to transfer a small amount (around
-                  1 mg) of Agarose into the empty Solution Beaker.
-                </li>
-                <li>
-                  Click on the Buffer Beaker to transfer 5 ml of the Buffer
-                  Solution to the Solution Beaker.
-                </li>
-                <li>
-                  Click on the Solution Beaker to shake it and make a clear
-                  solution.
-                </li>
-                <li>
-                  Click on the Solution Beaker to place it in the Microwave. The
-                  solution needs to be heated at high temperature for some time.
-                </li>
-                <li>
-                  Click on the Microwave now to take out the Solution Beaker.
-                </li>
-                <li>
-                  Click on the Solution Beaker to transfer some amount of the
-                  Gel Solution to the Gel Mold.
-                </li>
-                <li>
-                  Wait for the Gel Solution to cool down in the mold, and then
-                  you have successfully prepared your Gel.
-                </li>
-                <li>
-                  Click on the Restart option in the Control Menu to restart the
-                  experiment from scratch.
+                  Click on the Benzene option in the Apparatus Menu to introduce
+                  it into the workspace.
                 </li>
               </ol>
             </Typography>
@@ -284,19 +205,7 @@ const GetMold = () => {
                         }))
                       }
                     >
-                      <ListItemText primary="Agarose Beaker" />
-                    </ListItemButton>
-                  </ListItem>
-                  <ListItem disablePadding>
-                    <ListItemButton
-                      onClick={() =>
-                        setApparatus((prev) => ({
-                          ...prev,
-                          solventBeaker: true,
-                        }))
-                      }
-                    >
-                      <ListItemText primary="Buffer Solution Beaker" />
+                      <ListItemText primary="Benzene" />
                     </ListItemButton>
                   </ListItem>
                   <ListItem disablePadding>
@@ -305,16 +214,7 @@ const GetMold = () => {
                         setApparatus((prev) => ({ ...prev, mortar: true }))
                       }
                     >
-                      <ListItemText primary="Solution Beaker" />
-                    </ListItemButton>
-                  </ListItem>
-                  <ListItem disablePadding>
-                    <ListItemButton
-                      onClick={() =>
-                        setApparatus((prev) => ({ ...prev, irplate: true }))
-                      }
-                    >
-                      <ListItemText primary="Gel Mold" />
+                      <ListItemText primary="NMR Tube" />
                     </ListItemButton>
                   </ListItem>
                   <ListItem disablePadding>
@@ -323,7 +223,7 @@ const GetMold = () => {
                         setApparatus((prev) => ({ ...prev, desiccator: true }))
                       }
                     >
-                      <ListItemText primary="Microwave" />
+                      <ListItemText primary="NMR Spectrometer" />
                     </ListItemButton>
                   </ListItem>
                 </List>
@@ -338,14 +238,14 @@ const GetMold = () => {
                 display: "flex",
               }}
             >
-              <Grid container sx={{ display: "flex" }}>
+              <Grid container>
                 <Grid item xs={8}>
                   <Grid container>
-                    <Grid item xs={5}>
+                    <Grid item xs={12}>
                       {sampleBeaker && (
                         <>
                           <img
-                            src={currentSampleBeakerImg}
+                            src={currentBenzeneb1}
                             alt="sampleBeaker"
                             height={"200px"}
                             onClick={handleSampleBeakerClick}
@@ -356,51 +256,23 @@ const GetMold = () => {
                               cursor: "pointer",
                             }}
                           />
-                          <Typography textAlign="center" width="144px">
-                            Agarose Beaker
-                          </Typography>
-                        </>
-                      )}
-                    </Grid>
-                    <Grid item xs={7}>
-                      {solventBeaker && (
-                        <>
-                          <img
-                            src={currentSolventBeakerImg}
-                            alt="solventBeaker"
-                            height={"200px"}
-                            onClick={handleSolventBeakerClick}
-                            style={{
-                              transform: `rotate(${solventBeakerRotation}deg)`,
-                              transition: "transform 0.5s",
-                              position: "relative",
-                              right: "93px",
-                              cursor: "pointer",
-                            }}
-                          />
-                          <Typography
-                            textAlign="center"
-                            width="144px"
-                            position="relative"
-                            right="74px"
-                          >
-                            Buffer Beaker
+                          <Typography textAlign="center" width="266px">
+                            Benzene
                           </Typography>
                         </>
                       )}
                     </Grid>
                     <Grid
                       item
-                      width="53%"
                       sx={{
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
                       }}
                     >
-                      {finalMotorImage && showMortarImages ? (
+                      {getFinalImg && showMortarImages ? (
                         <img
-                          src={mortarActiveImg}
+                          src={SpectrometerFill2}
                           alt="mortar"
                           onClick={handleMortarClick}
                           style={{
@@ -409,27 +281,18 @@ const GetMold = () => {
                               : "none",
                             cursor: "pointer",
                             transformOrigin: "center",
+                            height: "225px",
                           }}
                         />
                       ) : (
                         mortar &&
                         showMortarImages && (
-                          <img src={currentMortarImg} alt="mortar" />
+                          <img
+                            src={currentSpectrometer2}
+                            alt="mortar"
+                            style={{ height: "225px" }}
+                          />
                         )
-                      )}
-                    </Grid>
-                    <Grid item sx={{ display: "grid", placeItems: "center" }}>
-                      {irplate && showMoldImg && (
-                        <img
-                          src={getMoldImg}
-                          alt="mold"
-                          width="250px"
-                          style={{
-                            animation: animateMold
-                              ? "moveLeft 2s forwards"
-                              : "none",
-                          }}
-                        />
                       )}
                     </Grid>
                   </Grid>
@@ -439,12 +302,11 @@ const GetMold = () => {
                   {desiccator && (
                     <img
                       src={microwave}
-                      onClick={handleMicrowaveClick}
                       alt="microwave"
-                      width="300px"
+                      width="250px"
                       style={{
-                        cursor: microwaveClicked ? "not-allowed" : "pointer",
-                        marginTop: "190px",
+                        cursor: "not-allowed",
+                        marginTop: "0px",
                       }}
                     />
                   )}
@@ -456,15 +318,25 @@ const GetMold = () => {
           <style>
             {`
               @keyframes moveRight {
-                0% { transform: translateX(0) scale(1); opacity: 1; }
-                99% { opacity: 1; }
-                100% { transform: translateX(600px) scale(0.5); opacity: 0; }
-              }
-
-              @keyframes moveLeft {
-                0% { transform: translateX(300px) scale(0.5); opacity: 1; }
-                99% { opacity: 0; }
-                100% { transform: translateX(0) scale(1); opacity: 0; }
+                0% { 
+                  transform: translateX(0) scale(1); 
+                  opacity: 1;  
+                  margin-bottom: 12%; 
+                  position: relative; 
+                  bottom: 0; 
+                }
+                99% { 
+                  opacity: 1;  
+                  margin-bottom: 12%; 
+                  position: relative; 
+                  bottom: 55px; 
+                }
+                100% { 
+                  transform: translateX(550px) scale(0.5); 
+                  opacity: 0; 
+                  position: relative; 
+                  bottom: 55px; 
+                }
               }
             `}
           </style>
@@ -478,7 +350,7 @@ const GetMold = () => {
               mx: "auto",
               my: "30px",
             }}
-            onClick={() => setLevel((prev) => prev + 1)}
+            onClick={handleNextBtn}
           >
             Next
           </Button>
@@ -539,4 +411,4 @@ const GetMold = () => {
   );
 };
 
-export default GetMold;
+export default NuclearMagneticResosnance;

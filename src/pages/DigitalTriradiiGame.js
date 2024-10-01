@@ -173,17 +173,19 @@ const DigitalTriradii = () => {
                 <Typography variant="h6">Instruction:</Typography>
                 <Typography sx={{ py: 1, px: 4 }}>
                   <ol>
-                    <li>Identify the Digital Triradii</li>
-                    <li>Given a boxes for drop letter.</li>
+                    <li>Identify the Digital Triradii.</li>
+                    <li>Given boxes for dropping letters.</li>
                     <li>
-                      Before going next step put all letters correct inside box.
+                      Before going to the next step, put all letters correctly
+                      inside the box.
                     </li>
                     <li>
-                      Drop letter one by one staring from left to go right.
+                      Drop the letters one by one, starting from the left to go
+                      right.
                     </li>
                     <li>
-                      Once you will drop all letter inside box then you will go
-                      next step and see exact answer.
+                      Once you have dropped all the letters inside the box, you
+                      can go to the next step and see the exact answer.
                     </li>
                   </ol>
                 </Typography>

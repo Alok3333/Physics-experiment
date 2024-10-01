@@ -169,28 +169,31 @@ const OpticalFibre = () => {
                 <Typography variant="h6">Instruction:</Typography>
                 <Typography sx={{ py: 1, px: 4 }}>
                   <ol>
-                    <li>First arrenge the all tools given a image below.</li>
                     <li>
-                      Once you arreged all tools then you will able to click{" "}
-                      <b style={{ color: "blue" }}>select cable</b> button.
+                      First, arrange all the tools given in the image below.
                     </li>
                     <li>
-                      Select cable we have two value fibre cable and glass
+                      Once you have arranged all the tools, you will be able to
+                      click <b style={{ color: "blue" }}>select cable</b>{" "}
+                      button.
+                    </li>
+                    <li>
+                      Select a cable; we have two types: fiber cable and glass
                       cable.
                     </li>
                     <li>
-                      Once you seleted any value then you will see{" "}
-                      <b>Distance of Screen (L) in mm:</b> and in down table you
-                      will see diameter with value.
+                      Once you select any option, you will see{" "}
+                      <b>Distance of Screen (L) in mm:</b> and in the table
+                      below, you will see the diameter with its value.
                     </li>
                     <li>
-                      Distance of Screen, when you will decrease and increase
-                      the range, you will see effect on right side{" "}
-                      <b>output screen</b>
+                      The Distance of Screen: when you decrease or increase the
+                      range, you will see the effect on the right side{" "}
+                      <b>output screen</b>.
                     </li>
                     <li>
-                      Finally you will see Measurement of Numerical Aperture of
-                      Optical Fiber with fibre and glass.
+                      Finally, you will see the Measurement of Numerical
+                      Aperture of Optical Fiber with fiber and glass.
                     </li>
                   </ol>
                 </Typography>
@@ -289,7 +292,7 @@ const OpticalFibre = () => {
                   p: 2,
                 }}
               >
-                Arrenge the tool like this way
+                Arrange the tools in this way
               </Typography>
               <img
                 src="https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-19-5727-optical_fib1.png"
