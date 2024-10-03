@@ -23,8 +23,8 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import KeyboardVoiceIcon from "@mui/icons-material/KeyboardVoice";
 // CSS path here make sure change the path here
-// import styles from "../virtuallabcss/Video2.module.css"; 
-import styles from "./Video3.module.css";
+import styles from "../virtuallabcss/Video2.module.css"; 
+// import styles from "./Video3.module.css";
 
 import {
   TransformWrapper,

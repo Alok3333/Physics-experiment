@@ -12,6 +12,10 @@ import {
   Typography,
 } from "@mui/material";
 
+const men =
+  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/10-2024-3-3353-Avatar_S.png";
+const observeImg =
+  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/10-2024-3-653-observe_rectangle.png";
 const Benzeneb1 =
   "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/10-2024-1-2757-Benzene-removebg-preview.png";
 const Spectrometer2 =
@@ -24,8 +28,6 @@ const SpectrometerFill22 =
   "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/10-2024-1-2933-Benzene.gif";
 const microwave =
   "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/10-2024-1-1210-NMRSpectro.png";
-const solventBeakerImg =
-  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/9-2024-26-5233-solvent.png";
 
 const SpectrometerDefault = Spectrometer2;
 
@@ -40,10 +42,10 @@ const NuclearMagneticResosnance = () => {
     sampleBeaker: false,
     solventBeaker: false,
     mortar: false,
-    irplate: false,
-    desiccator: false,
+    // desiccator: false,
+    observe: false,
   });
-  const { sampleBeaker, mortar, desiccator } = apparatus;
+  const { sampleBeaker, mortar, desiccator, observe } = apparatus;
 
   const [sampleBeakerRotation, setSampleBeakerRotation] = useState(0);
   const [currentBenzeneb1, setCurrentBenzeneb1] = useState(Benzeneb1);
@@ -117,7 +119,7 @@ const NuclearMagneticResosnance = () => {
           <br />
           Register no: {registerNo}
         </Typography>
-        {level > 1 ? (
+        {level > 2 ? (
           <Button variant="contained" onClick={() => window.print()}>
             Print result
           </Button>
@@ -169,6 +171,34 @@ const NuclearMagneticResosnance = () => {
                   Click on the Benzene option in the Apparatus Menu to introduce
                   it into the workspace.
                 </li>
+                <li>
+                  Click on the NMR Tube option in the Apparatus Menu to
+                  introduce it into the workspace.
+                </li>
+                <li>
+                  Click on the NMR Spectrometer option in the Apparatus Menu to
+                  introduce it into the workspace.
+                </li>
+                <li>
+                  Click on the Benzene beaker to transfer some amount of Benzene
+                  into the NMR Tube.
+                </li>
+                <li>
+                  Click on the Tube to place it into the NMR Spectrometer.
+                </li>
+                <li>
+                  Click on Observe button to observe what is happening inside
+                  the NMR Spectrometer.
+                </li>
+                <li>
+                  <b>Observations:</b>
+                </li>
+                <li>
+                  Now observe the image of the NMR Spectrometer. It can be seen
+                  that the NMR Tube is rotated between Radio Frequency Generator
+                  and Radio Frequency Receiver while the Magnetic Field passes
+                  through it.
+                </li>
               </ol>
             </Typography>
           </Box>
@@ -190,7 +220,15 @@ const NuclearMagneticResosnance = () => {
 
       {level === 1 && (
         <Container>
-          <Typography variant="h6">Level - {level}</Typography>
+          <Typography
+            variant="h6"
+            marginBottom="10px"
+            bgcolor="#FFFF00"
+            textAlign="center"
+            borderRadius="5px"
+          >
+            Level - {level}
+          </Typography>
           <Box sx={{ display: "flex", margin: "40px 0px" }}>
             <Box sx={{ width: "20%" }}>
               <Box>
@@ -227,6 +265,17 @@ const NuclearMagneticResosnance = () => {
                     </ListItemButton>
                   </ListItem>
                 </List>
+                <Box>
+                  <img
+                    src={men}
+                    alt="..."
+                    style={{
+                      width: "215px",
+                      height: "300px",
+                      objectFit: "contain",
+                    }}
+                  />
+                </Box>
               </Box>
             </Box>
             <Box
@@ -350,6 +399,76 @@ const NuclearMagneticResosnance = () => {
               mx: "auto",
               my: "30px",
             }}
+            onClick={() => setLevel((prev) => prev + 1)}
+          >
+            Next
+          </Button>
+        </Container>
+      )}
+
+      {level === 2 && (
+        <Container>
+          <Typography
+            variant="h6"
+            marginBottom="10px"
+            bgcolor="#FFFF00"
+            textAlign="center"
+            borderRadius="5px"
+          >
+            Level - {level}
+          </Typography>
+          <Box sx={{ display: "flex", margin: "40px 0px" }}>
+            <Box sx={{ width: "20%" }}>
+              <Box>
+                <Typography variant="h6">Control Menu</Typography>
+                <List>
+                  <ListItem disablePadding>
+                    <ListItemButton
+                      onClick={() =>
+                        setApparatus((prev) => ({ ...prev, observe: true }))
+                      }
+                    >
+                      Observe
+                    </ListItemButton>
+                  </ListItem>
+                </List>
+              </Box>
+            </Box>
+            <Box
+              sx={{
+                width: "80%",
+                height: "500px",
+                padding: "20px",
+                border: "2px solid green",
+              }}
+            >
+              <Grid container sx={{ display: "grid", placeItems: "center" }}>
+                <Grid item>
+                  {observe && (
+                    <img
+                      src={observeImg}
+                      alt="observeImg"
+                      style={{
+                        width: "100%",
+                        height: "450px",
+                        cursor: "not-allowed",
+                        marginTop: "0px",
+                      }}
+                    />
+                  )}
+                </Grid>
+              </Grid>
+            </Box>
+          </Box>
+          <Button
+            variant="contained"
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              mx: "auto",
+              my: "30px",
+            }}
             onClick={handleNextBtn}
           >
             Next
@@ -357,7 +476,7 @@ const NuclearMagneticResosnance = () => {
         </Container>
       )}
 
-      {level > 1 && (
+      {level > 2 && (
         <Container
           sx={{
             width: "100%",
@@ -404,6 +523,21 @@ const NuclearMagneticResosnance = () => {
                 </Typography>
               )}
             </Box>
+          </Box>
+          <Box>
+            <Button
+              variant="contained"
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                mx: "auto",
+                my: "30px",
+              }}
+              onClick={() => window.location.reload()}
+            >
+              Restart
+            </Button>
           </Box>
         </Container>
       )}

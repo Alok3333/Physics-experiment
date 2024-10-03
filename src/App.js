@@ -1,4 +1,5 @@
 import "./App.css";
+import BitSerial from "./pages/BitSerialGame";
 import DigitalTriradii from "./pages/DigitalTriradiiGame";
 import DragDrop from "./pages/DragDrop";
 import FingerPrintPatterns from "./pages/FingerPrintPatternsGame";
@@ -18,13 +19,13 @@ function App() {
   return (
     <div className="App">
       {/* <VideoPage31 /> */}
-      <VideoPage/>
+      {/* <VideoPage/> */}
       {/* <DragDrop/> */}
       {/* <Simulation /> */}
       {/* <PhaseSequenceSynchronous/> */}
 
       {/* <MendelsLaw /> */}
-      
+
       {/* <GetMold/> */}
       {/* <DigitalTriradii/> */}
       {/* <SkeletonExpPart2 /> */}
@@ -32,8 +33,9 @@ function App() {
       {/* <StefansLawVerification/> */}
       {/* <FingerPrintPatterns /> */}
       {/* <SkeletonExp/> */}
+      {/* <BitSerial/> */}
 
-      {/* <NuclearMagneticResosnance/> */}
+      <NuclearMagneticResosnance />
     </div>
   );
 }
