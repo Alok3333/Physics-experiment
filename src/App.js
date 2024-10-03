@@ -12,11 +12,13 @@ import SkeletonExp from "./pages/SkeletonExpGame";
 import SkeletonExpPart2 from "./pages/SkeletonExpPart2Game";
 import StefansLawVerification from "./pages/StefansLawGame";
 import VideoPage31 from "./pages/Videopage31";
+import VideoPage from "./pages/Videopage32a";
 
 function App() {
   return (
     <div className="App">
       {/* <VideoPage31 /> */}
+      <VideoPage/>
       {/* <DragDrop/> */}
       {/* <Simulation /> */}
       {/* <PhaseSequenceSynchronous/> */}
@@ -31,7 +33,7 @@ function App() {
       {/* <FingerPrintPatterns /> */}
       {/* <SkeletonExp/> */}
 
-      <NuclearMagneticResosnance/>
+      {/* <NuclearMagneticResosnance/> */}
     </div>
   );
 }
