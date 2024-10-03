@@ -12,22 +12,28 @@ import {
   Typography,
 } from "@mui/material";
 
+// import massSpectroImg from "../assets/Thermo_Scientific_1.jpg";
+// import Benzeneb1 from "../assets/Benzene__2_-removebg-preview.png";
+// import Benzeneb1Tilled from "../assets/BenzeneTilled-removebg-preview.png";
+// import SpectrometerFill22 from "../assets/tube_fill.gif"
+// import SpectrometerFill2 from "../assets/tube_fill_after-removebg-preview.png";
+
 const men =
   "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/10-2024-3-3353-Avatar_S.png";
 const observeImg =
   "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/10-2024-3-653-observe_rectangle.png";
 const Benzeneb1 =
-  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/10-2024-1-2757-Benzene-removebg-preview.png";
+  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/10-2024-3-3254-Benzene__2_-removebg-preview.png";
 const Spectrometer2 =
   "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/10-2024-1-2350-b2-removebg-preview.png";
 const SpectrometerFill2 =
-  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/10-2024-1-2717-Benzene_fill-removebg-preview.png";
+  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/10-2024-3-4128-tube_fill_after-removebg-preview.png";
 const Benzeneb1Tilled =
-  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/10-2024-1-2644-Benzene__1_-removebg-preview.png";
+  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/10-2024-3-3513-BenzeneTilled-removebg-preview.png";
 const SpectrometerFill22 =
-  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/10-2024-1-2933-Benzene.gif";
-const microwave =
-  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/10-2024-1-1210-NMRSpectro.png";
+  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/10-2024-3-3917-tube_fill.gif";
+const massSpectroImg =
+  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/10-2024-3-3232-Thermo_Scientific_1.jpg";
 
 const SpectrometerDefault = Spectrometer2;
 
@@ -35,7 +41,7 @@ const SpectrometerDefault = Spectrometer2;
 const username = global1.name;
 const registerNo = global1.regno;
 
-const NuclearMagneticResosnance = () => {
+const MassSpectrocopy = () => {
   const [level, setLevel] = useState(0);
   const [score, setScore] = useState(0);
   const [apparatus, setApparatus] = useState({
@@ -143,8 +149,7 @@ const NuclearMagneticResosnance = () => {
           sx={{ border: "5px solid green", p: "10px 0px", borderRadius: "5px" }}
         >
           <Typography variant="h4" textAlign="center" fontWeight="bold">
-            Nuclear Magnetic Resosnance Spectrocopy and Evaulation of Simple 1H
-            NMR Spectra of Select Organic Compounds
+            Mass Spectrometer
           </Typography>
           <Box>
             <Typography
@@ -168,36 +173,41 @@ const NuclearMagneticResosnance = () => {
               {/* Theory content here */}
               <ol style={{ marginLeft: "20px" }}>
                 <li>
-                  Click on the Benzene option in the Apparatus Menu to introduce
+                  Click on the Sample option in the Apparatus Menu to introduce
                   it into the workspace.
                 </li>
                 <li>
-                  Click on the NMR Tube option in the Apparatus Menu to
+                  Click on the Tube option in the Apparatus Menu to introduce it
+                  into the workspace.
+                </li>
+                <li>
+                  Click on the Mass Spectrometer option in the Apparatus Menu to
                   introduce it into the workspace.
                 </li>
                 <li>
-                  Click on the NMR Spectrometer option in the Apparatus Menu to
-                  introduce it into the workspace.
+                  Click on the Sample beaker to transfer some amount of the
+                  sample into the Tube.
                 </li>
                 <li>
-                  Click on the Benzene beaker to transfer some amount of Benzene
-                  into the NMR Tube.
-                </li>
-                <li>
-                  Click on the Tube to place it into the NMR Spectrometer.
+                  Click on the Tube to place it into the Mass Spectrometer.
                 </li>
                 <li>
                   Click on Observe button to observe what is happening inside
-                  the NMR Spectrometer.
+                  the Mass Spectrometer and choose video speed according to your
+                  own liking.
                 </li>
                 <li>
                   <b>Observations:</b>
                 </li>
                 <li>
-                  Now observe the image of the NMR Spectrometer. It can be seen
-                  that the NMR Tube is rotated between Radio Frequency Generator
-                  and Radio Frequency Receiver while the Magnetic Field passes
-                  through it.
+                  Now observe the image of Mass Spectromter. The sample is
+                  introduced into the vaporisation chamber which is instantly
+                  vapourised due to high vacuum and heat. Positively charged
+                  radical ions are formed by bombardment of beam of high energy
+                  electrons. The positively charged radical ions are accelerated
+                  by perforated negative electrodes. The ions are sorted and
+                  separated by the magnetic field according to their mass/charge
+                  ratio.
                 </li>
               </ol>
             </Typography>
@@ -243,7 +253,7 @@ const NuclearMagneticResosnance = () => {
                         }))
                       }
                     >
-                      <ListItemText primary="Benzene" />
+                      <ListItemText primary="Sample" />
                     </ListItemButton>
                   </ListItem>
                   <ListItem disablePadding>
@@ -252,7 +262,7 @@ const NuclearMagneticResosnance = () => {
                         setApparatus((prev) => ({ ...prev, mortar: true }))
                       }
                     >
-                      <ListItemText primary="NMR Tube" />
+                      <ListItemText primary="Tube" />
                     </ListItemButton>
                   </ListItem>
                   <ListItem disablePadding>
@@ -261,7 +271,7 @@ const NuclearMagneticResosnance = () => {
                         setApparatus((prev) => ({ ...prev, desiccator: true }))
                       }
                     >
-                      <ListItemText primary="NMR Spectrometer" />
+                      <ListItemText primary="Mass Spectrometer" />
                     </ListItemButton>
                   </ListItem>
                 </List>
@@ -288,7 +298,7 @@ const NuclearMagneticResosnance = () => {
               }}
             >
               <Grid container>
-                <Grid item xs={8}>
+                <Grid item xs={4}>
                   <Grid container>
                     <Grid item xs={12}>
                       {sampleBeaker && (
@@ -347,13 +357,15 @@ const NuclearMagneticResosnance = () => {
                   </Grid>
                 </Grid>
 
-                <Grid item xs={4}>
+                <Grid item xs={8}>
                   {desiccator && (
                     <img
-                      src={microwave}
-                      alt="microwave"
-                      width="250px"
+                      src={massSpectroImg}
+                      alt="massSpectroImg"
                       style={{
+                        width: "100%",
+                        height: "450px",
+                        objectFit: "cover",
                         cursor: "not-allowed",
                         marginTop: "0px",
                       }}
@@ -378,13 +390,13 @@ const NuclearMagneticResosnance = () => {
                   opacity: 1;  
                   margin-bottom: 12%; 
                   position: relative; 
-                  bottom: 55px; 
+                  bottom: 115px; 
                 }
                 100% { 
-                  transform: translateX(550px) scale(0.5); 
+                  transform: translateX(300px) scale(0.2); 
                   opacity: 0; 
                   position: relative; 
-                  bottom: 55px; 
+                  bottom: 115px; 
                 }
               }
             `}
@@ -493,8 +505,7 @@ const NuclearMagneticResosnance = () => {
             fontWeight="bold"
             mb={"30px"}
           >
-            Nuclear Magnetic Resosnance Spectrocopy and Evaulation of Simple 1H
-            NMR Spectra of Select Organic Compounds
+            Mass Spectrometer
           </Typography>
           <Box
             sx={{
@@ -546,4 +557,4 @@ const NuclearMagneticResosnance = () => {
   );
 };
 
-export default NuclearMagneticResosnance;
+export default MassSpectrocopy;

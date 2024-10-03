@@ -1,0 +1,10 @@
+import NuclearMagneticResosnance from "./pages/NuclearMagneticResosnance";
+
+<Route path="/NuclearMagneticResosnance" element={<NuclearMagneticResosnance />} />
+
+<ListItem button component={RouterLink} to="/NuclearMagneticResosnance">
+<ListItemIcon>
+<PersonIcon />
+</ListItemIcon>
+{open && <ListItemText primaryTypographyProps={{fontSize: "14px"}} primary="Asset register" />}
+</ListItem>

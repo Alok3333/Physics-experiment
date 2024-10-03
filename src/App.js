@@ -4,6 +4,7 @@ import DigitalTriradii from "./pages/DigitalTriradiiGame";
 import DragDrop from "./pages/DragDrop";
 import FingerPrintPatterns from "./pages/FingerPrintPatternsGame";
 import GetMold from "./pages/GetMoldGame";
+import MassSpectrocopy from "./pages/MassSpectrocopy";
 import MendelsLaw from "./pages/MendelsLaw";
 import NuclearMagneticResosnance from "./pages/NuclearMagneticResosnance";
 import OpticalFibre from "./pages/OpticalFibreGame";
@@ -36,6 +37,7 @@ function App() {
       {/* <BitSerial/> */}
 
       <NuclearMagneticResosnance />
+      {/* <MassSpectrocopy/> */}
     </div>
   );
 }
