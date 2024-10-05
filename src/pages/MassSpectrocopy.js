@@ -192,7 +192,7 @@ const MassSpectrocopy = () => {
                   Click on the Tube to place it into the Mass Spectrometer.
                 </li>
                 <li>
-                  Click on Observe button to observe what is happening inside
+                  Click on the Observe button to see what is happening inside
                   the Mass Spectrometer and choose video speed according to your
                   own liking.
                 </li>
@@ -200,14 +200,14 @@ const MassSpectrocopy = () => {
                   <b>Observations:</b>
                 </li>
                 <li>
-                  Now observe the image of Mass Spectromter. The sample is
-                  introduced into the vaporisation chamber which is instantly
-                  vapourised due to high vacuum and heat. Positively charged
-                  radical ions are formed by bombardment of beam of high energy
-                  electrons. The positively charged radical ions are accelerated
-                  by perforated negative electrodes. The ions are sorted and
-                  separated by the magnetic field according to their mass/charge
-                  ratio.
+                  Now observe the image of the Mass Spectrometer. The sample is
+                  introduced into the vaporization chamber, which is instantly
+                  vaporized due to high vacuum and heat. Positively charged
+                  radical ions are formed by the bombardment of a beam of
+                  high-energy electrons. The positively charged radical ions are
+                  accelerated by perforated negative electrodes. The ions are
+                  sorted and separated by the magnetic field according to their
+                  mass/charge ratio.
                 </li>
               </ol>
             </Typography>

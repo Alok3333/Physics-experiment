@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import dragStyle from "../virtuallabcss/Drag.module.css";
-import img1 from "../assets/Simple_light_bulb_graphic.png";
-import img2 from "../assets/bulb.jpeg";
-import img3 from "../assets/volt-meter.jpeg";
+// import img1 from "../assets/Simple_light_bulb_graphic.png";
+// import img2 from "../assets/bulb.jpeg";
+// import img3 from "../assets/volt-meter.jpeg";
 
 const DragDrop = () => {
   const [availableImages, setAvailableImages] = useState([
-    img1,
-    img2,
-    img3,
+    "img1",
+    "img2",
+    "img3",
   ]);
   const [droppedImages, setDroppedImages] = useState([]);
   const [draggedImage, setDraggedImage] = useState(null);
