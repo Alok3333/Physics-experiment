@@ -2,7 +2,69 @@ import React, { useState, useEffect } from "react";
 import HangmanCanvas from "./HangmanCanvas";
 // import "./HangmanGame.css"; // Import the additional CSS file
 
-const words = ["REACT", "JAVASCRIPT", "DEVELOPER", "HANGMAN", "COMPONENT", "FEEDBACK"];
+const words = [
+  "REACT",
+  "EDUCATION",
+  "COLLEGE",
+  "MAGIC",
+  "HAVEFUN",
+  "FEEDBACK",
+  "SCHOOL",
+  "LEARNING",
+  "STUDENT",
+  "TEACHER",
+  "BOOKS",
+  "HOMEWORK",
+  "CLASSROOM",
+  "UNIVERSITY",
+  "GRADUATE",
+  "KNOWLEDGE",
+  "LECTURE",
+  "ASSIGNMENT",
+  "EXAMINATION",
+  "RESEARCH",
+  "DISCIPLINE",
+  "CURRICULUM",
+  "EDUCATION",
+  "TUTORIAL",
+  "SCHOLARSHIP",
+  "LIBRARY",
+  "STUDY",
+  "LECTURER",
+  "DEGREE",
+  "ACADEMIC",
+  "PROJECT",
+  "PAPER",
+  "COACHING",
+  "WORKSHOP",
+  "SCHOOLMATE",
+  "FACULTY",
+  "CLASSMATES",
+  "CERTIFICATE",
+  "ELECTIVE",
+  "PROFESSOR",
+  "MATH",
+  "SCIENCE",
+  "HISTORY",
+  "LANGUAGE",
+  "ENGLISH",
+  "GEOGRAPHY",
+  "ART",
+  "MUSIC",
+  "SPORTS",
+  "CLUB",
+  "FIELDTRIP",
+  "PRACTICE",
+  "VOLUNTEER",
+  "TRIP",
+  "FUN",
+  "LIKE",
+  "SHARE",
+  "EVERYONE",
+  "MANY",
+  "MORE",
+  "LIVE",
+];
 
 const Iot1 = () => {
   const [word, setWord] = useState("");
@@ -12,6 +74,16 @@ const Iot1 = () => {
   useEffect(() => {
     resetGame();
   }, []);
+
+  useEffect(() => {
+    if (isGameWon() || isGameLost()) {
+      const timer = setTimeout(() => {
+        window.location.reload(); // Reload the page when the game is won or lost
+      }, 800); // Optionally add a delay before reloading
+
+      return () => clearTimeout(timer); // Clean up the timer
+    }
+  }, [mistakes, guessedLetters, word]);
 
   const chooseRandomWord = () => {
     const randomIndex = Math.floor(Math.random() * words.length);
@@ -43,13 +115,17 @@ const Iot1 = () => {
 
   return (
     <div className="hangman-container">
-      <h1 style={{color: "#40513B"}}>Hangman Game</h1>
-      <h5 style={{color: "#40513B"}}>
-        Hangman is a word-guessing game. Start a new game, guess letters to
-        reveal the word, and avoid drawing the hangman by making incorrect
-        guesses. Win by guessing the word before the hangman is complete. Have
-        fun!
+      <h1 style={{ color: "#40513B" }}>Word-Guessing Game</h1>
+      <h5 style={{ color: "#40513B" }}>
+        Start a new game, guess letters to reveal the word, and avoid drawing
+        the word-guessing by making incorrect guesses. Win by guessing the word
+        is complete. Have fun!
       </h5>
+      <h5 style={{ color: "#40513B" }}>
+        We have over 50 words related to education. Guess the letters and have
+        fun playing!
+      </h5>
+
       <HangmanCanvas mistakes={mistakes} />
       <div className="word-display">
         {word.split("").map((letter, index) => (

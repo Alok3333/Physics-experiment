@@ -3,6 +3,7 @@ import BitSerial from "./pages/BitSerialGame";
 import CatPuzzle from "./pages/CatPuzzle";
 import DigitalTriradii from "./pages/DigitalTriradiiGame";
 import DragDrop from "./pages/DragDrop";
+import FindDiff from "./pages/FindDiff";
 import FingerPrintPatterns from "./pages/FingerPrintPatternsGame";
 import GetMold from "./pages/GetMoldGame";
 import Iot1 from "./pages/Iot1";
@@ -49,6 +50,7 @@ function App() {
       {/* <TurtleRabbit/> */}
       <RaceGame/>
       {/* <QuickTap/> */}
+      {/* <FindDiff/> */}
     </div>
   );
 }

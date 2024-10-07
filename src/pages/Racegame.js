@@ -23,6 +23,9 @@ const bgimg =
 const bgimg2 =
   "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/10-2024-5-592-second-bg1.png";
 
+const bgimg3 =
+  "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/10-2024-7-2848-bg3_three.png";
+
 const woodboard =
   "https://jadavpuruniversity.s3-ap-south-1.amazonaws.com/10-2024-5-2031-wood_board_-removebg-preview.png";
 
@@ -506,7 +509,7 @@ const RaceGame = () => {
       {level === 3 && (
         <Box sx={{ width: "100%", height: "100vh", position: "relative" }}>
           <img
-            src={bgimg}
+            src={bgimg3}
             alt="background_image"
             style={{ width: "100%", height: "100%" }}
           />
